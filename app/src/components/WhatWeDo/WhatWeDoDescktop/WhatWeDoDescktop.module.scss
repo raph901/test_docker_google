@@ -1,0 +1,18 @@
+@import '@/styles/breakpoints.module';
+
+.allCardContainer {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+@include tabletS {
+	.allCardContainer {
+		gap: 2.604vw;
+	}
+}
+
+@include mobileL {
+	.allCardContainer {
+		flex-direction: column;
+	}
+}

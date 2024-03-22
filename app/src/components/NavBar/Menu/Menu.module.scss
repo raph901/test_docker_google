@@ -1,0 +1,152 @@
+@import '@/styles/_breakpoints.module.scss';
+
+.menu_desktop {
+	margin-left: auto;
+
+	.list {
+		display: flex;
+		list-style-type: none;
+		//gap: 1rem;
+		border: #f05801;
+
+		.item {
+			display: flex;
+			width: 5.833vw;
+			height: 1.528vw;
+			padding: 8px 15px;
+			justify-content: flex-end;
+			align-items: center;
+			border-radius: 3px 3px 15px 3px;
+			border: 1px solid #6f6f6f;
+			cursor: pointer;
+
+			&:hover {
+				border: 1px solid #f05801;
+			}
+			.link {
+				text-decoration: none;
+				font-family: var(--font-manrope);
+				font-size: 1.111vw;
+				font-weight: 400;
+				color: #6f6f6f;
+			}
+			.link:hover {
+				color: #f05801;
+			}
+		}
+
+		.itemWithBorder {
+			display: flex;
+			padding-right: 1.042vw;
+			height: 1.528vw;
+			padding-top: 10px;
+			justify-content: center;
+			align-items: center;
+			border-radius: 3px 3px 15px 3px;
+			cursor: pointer;
+			.link {
+				text-decoration: none;
+				font-family: var(--font-manrope);
+				font-size: 1.111vw;
+				font-weight: 400;
+				color: #6f6f6f;
+			}
+			.link:hover {
+				color: #f05801;
+			}
+		}
+	}
+}
+
+.menu_mobile {
+	margin-left: auto;
+	display: none;
+	.list {
+		display: flex;
+		list-style-type: none;
+		gap: 1rem;
+		.item {
+			.link {
+				text-decoration: none;
+				color: inherit;
+				font-family: var(--font-manrope);
+				font-size: 16px;
+				font-weight: 500;
+			}
+			.contact {
+				color: #f05801;
+			}
+		}
+	}
+}
+.menuMobileContainer {
+	display: none;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	z-index: 1;
+}
+@include tabletS {
+	.menu_desktop {
+		display: none;
+		.list {
+			.item {
+				width: 16.833vw;
+				height: 5.528vw;
+				margin-right: 2.415vw;
+
+				.link {
+					font-size: 3vw;
+				}
+			}
+
+			.itemWithBorder {
+				width: 16.833vw;
+				height: 5.528vw;
+				.link {
+					font-size: 3vw;
+				}
+			}
+		}
+	}
+	.menu_mobile {
+		margin-left: auto;
+		display: block;
+		z-index: 2;
+		.logo__img {
+			width: 48px;
+			height: 48px;
+		}
+		.list {
+			display: flex;
+			list-style-type: none;
+			gap: 1rem;
+			.item {
+				.link {
+					text-decoration: none;
+					color: inherit;
+					font-family: var(--font-manrope);
+					font-size: 16px;
+					font-weight: 500;
+				}
+				.contact {
+					color: #f05801;
+				}
+			}
+		}
+	}
+	.menuMobileContainer {
+		display: flex;
+		justify-content: center;
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		background-color: #fff;
+		z-index: 1;
+	}
+}

@@ -1,0 +1,47 @@
+.partner{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-image: url('/images/partner/partnerBg.svg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .container{
+        width: 80%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        .textContainer{
+            width: 100%;
+            display: flex;
+            .text{
+                color: #FFF;
+                font-family: var(--font-manrope);
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 40px; /* 100% */
+            }
+        }
+        .partnerContainer{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            .container{
+                display: flex;
+                justify-content: flex-end;
+                gap: 1rem;
+                .firstWrapper, .secondWrapper{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    opacity: 0;
+                }
+                .secondWrapper{
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+}

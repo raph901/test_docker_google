@@ -1,0 +1,116 @@
+@import '@/styles/breakpoints.module';
+
+.container{
+    // position: fixed;
+    inset: 0px;
+    // background-color: rgba(51, 65, 85, 0.3);
+    z-index: 10;
+}
+
+.subContainer{
+    z-index: 10;
+    background-color: #fff;
+    padding: 1vw;
+    position: fixed;
+    width: 26.528vw;
+    height: 15.333vw;
+    bottom: 1vw;
+    // left: 0;
+    right: 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // border: 2px solid red;
+}
+
+.cookiesContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.694vw;
+}
+.logoContainer{
+    width: 100%;
+}
+.text{
+    font-family: var(--font-manrope);
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.acceptContainer{
+    width: 100%;
+}
+.acceptButton{
+    width: 100%;
+    height: 2.917vw;
+    padding: 0.694vw 1.389vw;
+    background-color: #F05801;
+    font-family: var(--font-manrope);
+    font-size: 1.111vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 45px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.declineContainer{
+    width: 100%;
+}
+
+.declineButton{
+    width: 100%;
+    height: 2.917vw;
+    padding: 0.694vw 1.389vw;
+    background-color: #FFFFFF;
+    font-family: var(--font-manrope);
+    font-size: 1.111vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #F05801;
+    border: 1px solid #F05801;
+    border-radius: 45px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+@include tabletS {
+    .subContainer{
+        padding: 2.103vw .896vh;
+        width: 73.333vw;
+        height: 25.886vh;
+        bottom: 1vw;
+        right: 2vw;
+    }
+    .cookiesContainer{
+        gap: 1.185vh;
+    }
+    .logo{
+        width: 23.077vw;
+        height: 3.353vh;
+    }
+    .text{
+        font-size: 3.077vw;
+    }
+    .acceptButton{
+        width: 100%;
+        height: 4.621vh;
+        font-size: 3.077vw;
+        border-radius: 45px;
+    }
+    .declineButton{
+        width: 100%;
+        height: 4.621vh;
+        font-size: 3.077vw;
+        border-radius: 45px;
+    }
+    
+}

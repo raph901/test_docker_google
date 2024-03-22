@@ -1,0 +1,22 @@
+{
+  "name": "cure51",
+  "version": "1.0.0",
+  "description": "Site Cure51",
+  "main": "index.js",
+  "scripts": {
+    "dev": "docker compose -f docker-compose.dev.yml -f docker-compose.yml up -d",
+    "prod": "docker compose -f docker-compose.prod.yml -f docker-compose.yml up -d",
+    "down": "docker compose -f docker-compose.dev.yml -f docker-compose.yml down",
+    "getDB": "docker exec mysql /usr/bin/mysqldump -u root --password='adelios23*' cure51 > backup_cure51.sql",
+    "pushDB": "docker exec -i mysql mysql -u root --password='adelios23*' cure51 < backup_cure51.sql"
+  },
+  "repository": {
+    "type": "git",
+    "url": "skynet:/volume1/Sources/cure51"
+  },
+  "author": "michael",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/client": "^3.9.5"
+  }
+}

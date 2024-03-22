@@ -1,0 +1,53 @@
+@import '@/styles/breakpoints.module';
+
+.whatWeDo {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	.container {
+		height: 100%;
+		width: 90%;
+		padding: 2.083vw 0;
+		.paragraphContainer {
+			.firstParagraph {
+				margin-top: 1.389vw;
+				color: var(--Main-Content, #000);
+				/* h3 */
+				font-family: var(--font-manrope);
+				font-size: 1.806vw;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 2.083vw
+			}
+			.secondParagraph {
+				/* H1 */
+				font-family: var(--font-manrope);
+				font-size: 3.472vw;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 130%;
+				letter-spacing: -0.104vw;
+				background: linear-gradient(45deg, #f05801 50%, #4f0fff 78.48%);
+				background-clip: text;
+				color: transparent;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+@include mobileL {
+	.whatWeDo {
+		height: 220vh;
+		.container {
+			.paragraphContainer {
+				.firstParagraph {
+					font-size: 4.6vw;
+				}
+				.secondParagraph {
+					font-size: 10vw;
+				}
+			}
+		}
+	}
+}

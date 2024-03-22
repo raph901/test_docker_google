@@ -1,0 +1,51 @@
+@import '@/styles/breakpoints.module';
+
+.partners {
+	font-family: var(--font-manrope);
+	width: 100%;
+
+	.partnersContainer {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+
+		.partnerCard {
+			width: 158px;
+			height: 181px;
+			padding: 10px;
+			.logoContainer {
+				position: relative;
+				width: 125px;
+				height: 100px;
+				margin: auto;
+			}
+			.subLogoContainer {
+				.directorImageContainer {
+					position: relative;
+					width: 30px;
+					height: 30px;
+				}
+
+				p {
+					margin-top: 5px;
+				}
+			}
+		}
+	}
+}
+@include mobileL {
+	.partners {
+		.partnersContainer {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			width: 100%;
+			.partnerCard {
+				display: flex;
+				flex-direction: column;
+				flex-basis: 100%;
+				flex: 1;
+			}
+		}
+	}
+}

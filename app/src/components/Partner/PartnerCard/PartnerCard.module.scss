@@ -1,0 +1,12 @@
+.partnerCard {
+    width: 179px;
+    height: 145px;
+    padding: 1rem;
+    position: relative;
+    background-color: white;
+    border-radius: 20px;
+
+    .partnerImage{
+        object-fit: none;
+    }
+}

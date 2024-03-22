@@ -1,0 +1,22 @@
+@import '@/styles/breakpoints.module';
+
+.bddSvg {
+	transform: translate(9vh, -9vh);
+}
+@include desktopX {
+	.bddSvg {
+		transform: translate(11vh, -11vh);
+	}
+}
+@include tabletS {
+	.bddSvg {
+		transform: none;
+	}
+	.baseSvg {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, 0%);
+		z-index: -1;
+		position: absolute;
+	}
+}

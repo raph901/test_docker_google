@@ -1,0 +1,22 @@
+@import '@/styles/breakpoints.module';
+
+.contactPageContainer{
+    margin-top: 8vh;
+    display: flex;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    // background: "linear-gradient(0deg, rgba(79, 15, 255, 0.05) 0.62%, rgba(96, 39, 255, 0.00) 58.46%), linear-gradient(0deg, rgba(255, 153, 95, 0.03) 0.62%, rgba(255, 93, 0, 0.00) 58.46%);"
+    background:
+        'linear-gradient(0deg, rgba(79, 15, 255, 0.05) 0.62%, rgba(96, 39, 255, 0.00) 58.46%);'
+}
+@include tabletS {
+    .contactPageContainer{
+        display: flex;
+        height: auto;
+        justify-content: center;
+        align-items: flex-start;
+        background:
+            'linear-gradient(0deg, rgba(79, 15, 255, 0.05) 0.62%, rgba(96, 39, 255, 0.00) 58.46%);'
+    }
+}

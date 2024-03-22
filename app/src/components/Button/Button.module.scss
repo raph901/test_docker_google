@@ -1,0 +1,55 @@
+@import '@/styles/breakpoints.module';
+
+.titleContainer {
+    .title {
+        position: relative;
+        display: inline-block;
+        font-weight: 400;
+        letter-spacing: 0.056vw;
+        line-height: 130%;
+        padding: 0.694vw 1.389vw;
+        // font-family: var(--font-manrope);
+        font-family: var(--font-inconsolata);
+
+        font-size: 1.111vw;
+        background: linear-gradient(45deg, #f05801 50%, #4f0fff 78.48%);
+        background-clip: text;
+        color: transparent;
+        border-radius: 2.778vw;
+        z-index: 0;
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            inset: 0;
+            border: 1px solid transparent;
+            border-radius: 2.778vw;
+            background: inherit;
+            background-origin: border-box;
+            background-clip: border-box;
+            -webkit-mask:
+                linear-gradient(#fff 0 0) padding-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            -webkit-mask-repeat: no-repeat;
+        }
+    }
+}
+
+
+@include tabletS {
+    .titleContainer {
+        .title {
+            font-size:4vw;
+            letter-spacing: 0.2vw;
+            line-height: 130%;
+            padding: 2.5vw 5vw;
+            border-radius: 2.778vw;
+            &::before {
+                border-radius: 10vw;
+            }
+        }
+    }
+
+}

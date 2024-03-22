@@ -1,0 +1,26 @@
+.analyse {
+	height: 170vh;
+	div {
+		margin-bottom: 5vh;
+	}
+}
+.imageContainerUp,
+.imageContainerDown {
+	height: 50vh;
+	width: 90vw;
+	position: relative;
+	img {
+		border-radius: 70px 10px;
+	}
+}
+.text {
+	background-color: #fefaf6;
+	font-family: var(--font-manrope);
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-align: center;
+	padding: 3vh;
+	border-radius: 5px;
+}

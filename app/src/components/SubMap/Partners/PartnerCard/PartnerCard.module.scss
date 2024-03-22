@@ -1,0 +1,44 @@
+@import '@/styles/breakpoints.module';
+
+.partnerCard {
+	width: 158px;
+	height: 181px;
+	padding: 10px;
+	position: relative;
+	background-color: white;
+	border-radius: 0 20px 0 0;
+
+	.logoContainer {
+		position: relative;
+		width: 125px;
+		height: 100px;
+		margin: auto;
+
+		.partnerImage {
+			object-fit: contain;
+		}
+	}
+
+	.subLogoContainer {
+		position: absolute;
+		bottom: 15px;
+
+		.directorImageContainer {
+			position: relative;
+			width: 30px;
+			height: 30px;
+		}
+
+		p {
+			margin-top: 5px;
+			font-weight: 400;
+			font-size: 12px;
+			line-height: 14.4px;
+		}
+	}
+}
+@include mobileL {
+	.partnerCard {
+		width: 34.667vw;
+	}
+}

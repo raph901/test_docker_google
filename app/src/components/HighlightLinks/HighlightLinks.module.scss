@@ -1,0 +1,45 @@
+@import '@/styles/breakpoints.module';
+
+.container {
+	font-family: var(--font-manrope);
+	width: 100%;
+	box-sizing: border-box;
+	padding-left: 2.083vw;
+
+	.linksContainer {
+		display: flex;
+		gap: 2.083vw;
+		padding-top: 10.0865vh;
+		padding-bottom: calc(10.0865vh * 1);
+
+		.highlightLinkcontainer {
+			width: 50%;
+
+			p {
+				font-size: 1.806vw;
+				font-weight: 400;
+				line-height: 50px;
+			}
+		}
+	}
+}
+
+@include tabletS {
+	.container {
+		.linksContainer {
+			display: block;
+			padding-top: 0;
+			padding-bottom: 0;
+
+			.highlightLinkcontainer {
+				width: 100%;
+				padding-top: calc(4.831vw);
+				padding-bottom: calc(7.077vw);
+
+				p {
+					font-size: calc(6.28vw);
+				}
+			}
+		}
+	}
+}

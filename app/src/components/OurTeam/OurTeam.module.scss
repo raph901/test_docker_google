@@ -1,0 +1,33 @@
+@import '@/styles/breakpoints.module';
+
+.container {
+  // width: 95%;
+  margin: auto;
+  padding: 0 2.5%;
+  background: linear-gradient(180deg, rgba(254,250,246,1) 77%, rgba(255,255,255,1) 100%);
+  box-sizing: border-box;
+  // padding-left: 2.083vw;
+  padding-bottom: 5vh;
+
+  .ourTeam {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4vw;
+
+    .profil {
+      width: 18.472vw;
+    }
+  }
+}
+@include tabletS {
+  .container{
+    margin: auto;
+    .ourTeam{
+      margin-top: 5vh;
+      justify-content: space-around;
+      .profil {
+        width: 44.04vw;
+      }
+    }
+  }
+}

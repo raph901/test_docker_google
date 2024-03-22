@@ -1,0 +1,125 @@
+@import '@/styles/_breakpoints.module';
+
+.interactiveMapContainer{
+    // border: 1px solid black;
+    margin-top: 4.028vw;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+.map{
+    position: relative;
+    width: 75%;
+    height: 100%;
+    img{
+        pointer-events: none;
+    }
+    .PointsImageSVGContainer{
+        z-index: -1;
+    }
+    .hoverContainer{
+        width: 100%;
+        height: 100%;
+        // border: 1px solid red
+    }
+}
+.continentContainer{
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    // border: 1px solid blue;
+    pointer-events: none;
+    h2{
+        color: #000;
+        font-family: var(--font-manrope);
+        font-size: 1.111vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    ul{
+        display: flex;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 0.347vw;
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+    li{
+        display: flex;
+        padding: 0.347vw 0.556vw;
+        align-items: center;
+        gap: 0.694vw;
+        border-radius: 0.139vw;
+        background: #FFF;
+        color: #000;
+        font-family: var(--font-manrope);
+        font-size: 1.111vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .america{
+        // border: 1px solid green;
+        display: inline-block;
+        position: absolute;
+        top: 46%;
+        left: -10%;
+        width: 30%
+        // ul{
+        //     width: 490px;
+        //     height: 138px;
+        // }
+    }
+    .europe{
+        // border: 1px solid green;
+        display: inline-block;
+        position: absolute;
+        top: -10%;
+        right: -10%;
+        width: 60%;
+        // ul{
+        //     width: 1200px;
+        //     height: 138px;
+        // }
+    }
+    .africa{
+        // border: 1px solid green;
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        right: 29%;
+        width: 30%;
+        // ul{
+        //     width: 535px;
+        //     height: 101px;
+        // }
+        bottom: 0%;
+        right: 40%;
+        ul{
+            width: 435px;
+            height: 101px;
+        }
+    }
+    .asia{
+        // border: 1px solid green;
+        display: inline-block;
+        position: absolute;
+        top: 28%;
+        right: -20%;
+        width: 30%;
+        // ul{
+        //     width: 435px;
+        //     height: 101px;
+        // }
+    }
+}
+}
+
+@include desktopM {
+    .interactiveMapContainer{
+        .continentContainer{
+            top: 3vh;
+        }
+    }
+}

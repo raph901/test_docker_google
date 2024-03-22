@@ -1,0 +1,11 @@
+.subMap{
+    // height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    background-color: #FEFAF6;
+    .subMapContainer{
+        width: 90%;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,98 @@
+@import '@/styles/breakpoints.module';
+
+.container {
+	width: 100vw;
+	padding-top: 10vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: var(--font-manrope);
+}
+.contentContainer {
+	width: 50%;
+}
+.titlePage {
+	font-size: 40px;
+	font-weight: 400;
+	line-height: 40px;
+	text-align: left;
+	color: #f05801;
+	padding-bottom: 2vh;
+}
+.textDescription {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 21.86px;
+	text-align: left;
+}
+.description {
+	padding: 1.852vh;
+	background-color: #fefaf6;
+	width: 96%;
+}
+.tagDescription {
+	display: flex;
+	gap: 1vh;
+	padding-bottom: 1vh;
+}
+.listeDynamique {
+	position: relative;
+	left: 2vh;
+}
+.liste {
+	padding-bottom: 2vh;
+	list-style-type: disc;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 21.86px;
+	text-align: left;
+}
+.title {
+	padding-top: 4vh;
+}
+.image {
+	width: 100%;
+	height: 100%;
+
+	filter: grayscale(100%);
+	border-radius: 2% 5% 0% 0%;
+}
+
+.containerTags {
+	display: flex;
+	gap: 0.694vw;
+
+	p {
+		border-style: solid;
+		border-width: 1px;
+		border-radius: 40px;
+		border-color: #6f6f6f;
+		font-size: 1.111vw;
+		color: #6f6f6f;
+		padding: 0.648vh 0.833vw 0.648vh 0.833vw;
+	}
+}
+
+.cursor {
+	cursor: pointer;
+}
+
+@include mobileL {
+	.container {
+		padding-top: 15vh;
+	}
+	.contentContainer {
+		width: 90%;
+	}
+
+	.containerTags {
+		display: flex;
+		gap: 0.694vw;
+
+		p {
+			font-size: 2vh;
+			padding: 1vh;
+		}
+	}
+}

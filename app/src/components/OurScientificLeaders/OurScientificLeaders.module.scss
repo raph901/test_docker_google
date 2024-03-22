@@ -1,0 +1,143 @@
+@import '@/styles/breakpoints.module';
+
+.ourScientificLeaders {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	padding: 30px 0;
+	background-color: #fefaf6;
+
+	.container {
+		width: 90%;
+		.titleContainer {
+			.firstTitleContainer {
+				.firstTitle {
+					position: relative;
+					display: inline-block;
+					padding: 1rem 1.5rem;
+					font-family: var(--font-inconsolata);
+					font-size: 16px;
+					background: linear-gradient(
+						45deg,
+						#f05801 50%,
+						#4f0fff 78.48%
+					);
+					background-clip: text;
+					color: transparent;
+					border-radius: 40px;
+					z-index: 0;
+					&::before {
+						content: '';
+						position: absolute;
+						z-index: -1;
+						inset: 0;
+						border: 1px solid transparent;
+						border-radius: 40px;
+						background: inherit;
+						background-origin: border-box;
+						background-clip: border-box;
+						-webkit-mask: linear-gradient(#fff 0 0) padding-box,
+							linear-gradient(#fff 0 0);
+						-webkit-mask-composite: xor;
+						mask-composite: exclude;
+						-webkit-mask-repeat: no-repeat;
+					}
+				}
+			}
+			.subtitleContainer {
+				margin-top: 20px;
+				.subtitle {
+					color: #000;
+					/* h3 */
+					font-family: var(--font-manrope);
+					font-size: 26px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 30px; /* 115.385% */
+					// width: 40%;
+					span {
+						font-family: var(--font-manrope);
+						font-size: 40px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 100%;
+						background: linear-gradient(
+							45deg,
+							#f05801 50%,
+							#4f0fff 78.48%
+						);
+						background-clip: text;
+						color: transparent;
+					}
+				}
+			}
+		}
+		.carouselContainer {
+			padding-top: 40px;
+			font-family: var(--font-manrope);
+			z-index: 2;
+			.carousel {
+				cursor: grab;
+				overflow: hidden;
+
+				.innerCarousel {
+					display: flex;
+					padding-bottom: 0.926vh;
+
+					.itemContainer {
+						position: relative;
+						height: 482px;
+						margin-right: 20px;
+						background-color: white;
+
+						.imgPeople {
+							background-color: #fefaf6;
+
+							img {
+								pointer-events: none;
+								width: 100%;
+							}
+						}
+						.textCarousel {
+							padding-left: 15px;
+							font-size: 16px;
+							display: flex;
+							width: 253px;
+							flex-direction: column;
+							gap: 10px;
+							.perso {
+								font-size: 20px;
+							}
+							.titletest {
+								color: #f05801;
+							}
+							.search {
+								width: 211px;
+								line-height: 18px;
+							}
+						}
+						.institut {
+							position: absolute;
+							bottom: 0;
+							padding: 10px 0 0 10px;
+							img {
+								// max-height: 70px;
+								// max-width: 70px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@include desktopXXL {
+	.ourScientificLeaders {
+		padding: 50px 0 0 0;
+	}
+}
+@include mobileM {
+	.ourScientificLeaders {
+		padding: 0;
+	}
+}

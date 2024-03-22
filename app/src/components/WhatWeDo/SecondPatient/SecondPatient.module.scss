@@ -1,0 +1,118 @@
+@import '@/styles/breakpoints.module';
+
+.cardContainer {
+	height: 100%;
+	.descriptionContainer {
+		height: 50px;
+		padding: 15px;
+		display: inline-flex;
+		gap: 1rem;
+		background-color: #fefaf6;
+		.descriptionTextContainer {
+			.firstParagraph {
+				font-family: var(--font-manrope);
+				font-size: 20px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 120%; /* 24px */
+			}
+			.secondParagraph {
+				/* Cure51 Marketing/H5 */
+				font-family: var(--font-manrope);
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 110%; /* 17.6px */
+			}
+		}
+	}
+	.secondImageContainer {
+		position: relative;
+		height: 100%;
+		display: flex;
+		margin-top: 10px;
+		.leftTraits {
+			margin-top: 40%;
+			width: 12px;
+			height: 171px;
+			flex-shrink: 0;
+			border-top: 2px solid var(--Sub-Content, #6f6f6f);
+			border-bottom: 2px solid var(--Sub-Content, #6f6f6f);
+		}
+		.rightTraits {
+			margin-top: 40%;
+			width: 12px;
+			height: 171px;
+			flex-shrink: 0;
+			border-top: 2px solid var(--Sub-Content, #6f6f6f);
+			border-bottom: 2px solid var(--Sub-Content, #6f6f6f);
+		}
+		.imageAndCalque {
+			.secondImageCalqueTop {
+				position: absolute;
+				top: 0;
+				width: 100%;
+				height: 40%;
+				// filter: "blur(5px)";
+			}
+			.secondImageCalqueMiddle {
+				position: absolute;
+				top: 40%;
+				width: 100%;
+				height: 40%;
+				// filter: "blur(5px)";
+			}
+			.secondImageCalqueBot {
+				position: absolute;
+				top: 80%;
+				width: 100%;
+				height: 20%;
+				// filter: "blur(5px)";
+			}
+			.secondImageTarget {
+				position: absolute;
+				top: 50%;
+				left: 30%;
+			}
+			.img {
+				width: 27.778vw;
+			}
+		}
+	}
+}
+@include tabletS {
+	.cardContainer {
+		.descriptionContainer {
+			.descriptionTextContainer {
+				.firstParagraph {
+					font-size: 5vw;
+				}
+				.secondParagraph {
+					font-size: 4vw;
+				}
+			}
+		}
+	}
+}
+@include mobileL {
+	.cardContainer {
+		padding-bottom: 5vh;
+		.secondImageContainer {
+			justify-content: center;
+			.imageAndCalque {
+				.secondImageCalqueTop {
+					width: 80%;
+				}
+				.secondImageCalqueMiddle {
+					width: 80%;
+				}
+				.secondImageCalqueBot {
+					width: 80%;
+				}
+				.img {
+					width: 75vw;
+				}
+			}
+		}
+	}
+}

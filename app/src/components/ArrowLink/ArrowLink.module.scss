@@ -1,0 +1,50 @@
+@import '@/styles/breakpoints.module';
+
+.linkContainer {
+	display: flex;
+	align-items: center;
+	margin-top: 2.235vh;
+	width: max-content;
+	cursor: pointer;
+
+	.linkImage {
+		object-fit: contain;
+		width: 1.667vw;
+		height: calc(1.667vw * 1);
+	}
+
+	.link {
+		color: black;
+		text-align: center;
+		font-size: calc(1.25vw);
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		text-decoration: none;
+		margin-left: 0.394vw;
+	}
+
+	.link:hover {
+		color: #f05801;
+	}
+}
+
+.linkContainer:hover {
+	.link {
+		color: #f05801;
+	}
+}
+
+@include tabletS {
+	.linkContainer {
+		.linkImage {
+			width: 5.797vw;
+			height: calc(5.797vw * 1);
+		}
+
+		.link {
+			font-size: calc(4.346880624vw);
+			// color: #f05801;
+		}
+	}
+}

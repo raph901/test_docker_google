@@ -1,0 +1,34 @@
+@import '@/styles/breakpoints.module';
+
+.container {
+	font-family: var(--font-manrope);
+	width: 100%;
+	box-sizing: border-box;
+	padding: 15vh 2.083vw 0 2.083vw;
+
+	p {
+		color: #f05801;
+		font-weight: 400;
+		font-size: 2.778vw;
+		width: 71.875vw;
+		line-height: 80px;
+	}
+}
+@include desktopXXL {
+	.container {
+		padding-top: 15vh;
+	}
+}
+
+@include tabletS {
+	.container {
+		padding-top: 15vh;
+
+		p {
+			width: 85.927vw;
+			font-size: calc(6.623vw * 1);
+			line-height: calc(6.623vw * 1);
+			font-weight: 400;
+		}
+	}
+}

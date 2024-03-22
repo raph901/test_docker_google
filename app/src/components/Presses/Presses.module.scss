@@ -1,0 +1,33 @@
+@import '@/styles/breakpoints.module';
+
+.container {
+  width: 100%;
+  background-color: white;
+  box-sizing: border-box;
+  padding-left: 2.083vw;
+  padding-top: 4.469vh;
+
+  .presses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6042vw;
+
+    .press {
+      width: 31.597vw;
+    }
+  }
+}
+
+@include tabletS {
+  .container {
+
+    .presses {
+      display: block;
+
+      .press {
+        width: 92.754vw;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+@import '@/styles/breakpoints.module';
+
+.container {
+  font-family: var(--font-manrope);
+  // height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10vh 2.083vw 0 2.083vw;
+
+  .firstContainer {
+    width: 100%;
+    height: 65.38vh;
+    display: flex;
+    justify-content: space-between;
+
+    .textContainer {
+      width: 50%;
+      display: flex;
+      align-items: center;
+
+      div {
+        p {
+          margin-top: 3vh;
+          font-size: 1.806vw;
+          font-weight: 400;
+          line-height: 3.352vh;
+          width: 47.014vw;
+          height: 13.408vh;
+        }
+      }
+    }
+
+    .containerImages {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50vw;
+      position: relative;
+
+      .containerImgMem {
+        width: 36.806vw;
+        height: 24.306vw;
+      }
+
+      .bottomContainerImages{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        // justify-content: space-between;
+        .containerImgPostIt {
+          margin-left: 0;
+          width: 13.889vw;
+          height: 13.889vw;
+          overflow: hidden;
+          max-width: 100%;
+        }
+        .containerImgWoman {
+          width: 13.889vw;
+          height:  13.889vw;
+          overflow: hidden;
+          max-width: 100%;
+        }
+      }
+
+      .img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@include tabletS {
+  .container {
+    // height: 50vh;
+    padding: 3vh 2.083vw 0 2.083vw;
+
+    .firstContainer {
+      display: block;
+      height: auto;
+      .containerImages {
+        margin-top: 5vh;
+        width: 100%;
+        position: relative;
+        .subContainerImages{
+          width: 100%;
+
+          .containerImgMem {
+            height: auto;
+            width: 100%;
+          }
+          .bottomContainerImages{
+            margin-top: 1vh;
+            .containerImgPostIt {
+              width: 46.053vw;
+              height: 46.053vw;
+            }
+      
+            .containerImgWoman {
+              width: 46.053vw;
+              height: 46.053vw;
+            }
+          }
+        }
+  
+        .img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      .textContainer {
+        width: 100%;
+
+        div {
+          p {
+            width: 95.033vw;
+            height: calc(95.033vw / 3);
+            font-size: calc(4.305vw * 1);
+          }
+        }
+      }
+    }
+  }
+}

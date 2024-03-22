@@ -1,0 +1,408 @@
+@import '@/styles/breakpoints.module';
+
+.hero {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	.background {
+		z-index: -1;
+		position: absolute;
+		height: 100vh;
+		width: 100%;
+		top: 0;
+		background: url('/images/hero/g12.svg') no-repeat center;
+		background-size: cover;
+		--g: content-box 50%/400% 400%;
+		opacity: 0;
+	}
+	.container {
+		width: 95%;
+		// display: flex;
+		// flex-direction: row;
+		.subContainer {
+			display: flex;
+			margin-top: 8vh;
+			// border: 1px solid red
+		}
+		.left {
+			// width: 50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			position: relative;
+			.uptitle {
+				// margin-top: 30vh;
+				color: #000;
+				font-family: var(--font-manrope);
+				font-size: 2.778vw;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 100%; /* 40px */
+				background: linear-gradient(45deg, #f05801 50%, #4f0fff 78.48%);
+				background-clip: text;
+				color: transparent;
+				display: inline-block;
+			}
+			.titleContainer {
+				.title {
+					color: #000;
+					font-family: var(--font-manrope);
+					font-size: 5.164vw;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 120%; /* 89.235px */
+					letter-spacing: -3.718px;
+				}
+			}
+			.outlierContainer {
+				display: flex;
+				gap: 1rem;
+
+				.outlier {
+					background: linear-gradient(
+													140deg,
+													#ffb68d,
+													#9773f9,
+													#ffb68d,
+													#9773f9
+					);
+					font-family: var(--font-manrope);
+					font-size: 5.164vw;
+					font-style: normal;
+					font-weight: 700;
+					line-height: normal;
+					border-radius: 5px 5px 30px 5px;
+					color: white;
+					line-height: 120%;
+					letter-spacing: -3.718px;
+					padding: 0rem 1rem;
+					background-size: 400% 400%;
+					animation: shine 8s linear infinite;
+					display: inline-block;
+					@keyframes shine {
+						0% {
+							background-position: 0 50%;
+						}
+						50% {
+							background-position: 100% 50%;
+						}
+						100% {
+							background-position: 0 50%;
+						}
+					}
+				}
+			}
+			.contactUsLinkContainer {
+				display: flex;
+				align-items: center;
+				.contactUsLinkImage{
+					object-fit: contain;
+					width: 1.667vw;
+					height: 1.667vw;
+				}
+				.contactUsLink {
+					color: #000;
+					text-align: center;
+					font-family: var(--font-manrope);
+					font-size: 1.25vw;
+					font-style: normal;
+					font-weight: 400;
+					line-height: normal;
+					text-decoration: none;
+				}
+			}
+
+			.partnerContainer {
+				width: 100%;
+				position: absolute;
+				bottom: 0;
+				.container {
+					display: flex;
+					flex-direction: column;
+					.title {
+						color: var(--Sub-Content, #6f6f6f);
+						// font-family: Ligconsolata;
+						font-family: var(--font-inconsolata);
+						font-size: 1.111vw;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 120%; /* 19.2px */
+						text-transform: uppercase;
+					}
+					.partenaires {
+						display: flex;
+						align-items: center;
+						gap: 1rem;
+						margin-top: 1vh;
+						.logo_gustave {
+							width: 5.903vw;
+							height: 4.167vw;
+						}
+						.logo_leon {
+							width: 5.903vw;
+							height: 4.167vw;
+						}
+						.logo_charite {
+							width: 5.903vw;
+							height: 4.167vw;
+						}
+						.logo_VHIO {
+							width: 5.903vw;
+							height: 4.167vw;
+						}
+					}
+				}
+			}
+		}
+		.right {
+			height: 100%;
+			margin-left: 7vw;
+			// width: 50%;
+			.container {
+				// border: 1px solid red;
+				width: 100%;
+				height: 100%;
+				.imagesContainer {
+					// border: 1px solid blue;
+					// height: 100%;
+					width: 100%;
+					// height: 100%;
+					// padding: 3rem 0;
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+					gap: 0.5rem;
+					.top {
+						display: flex;
+						justify-content: center;
+						align-items: end;
+						gap: 0.5rem;
+						height: 50%;
+						width: 100%;
+						.firstPictureContainer {
+							position: relative;
+							.firstPicture {
+								// border-radius: 60px 20px 20px 20px;
+								width: 14.931vw;
+								height: 22.222vw;
+								object-fit: contain;
+							}
+						}
+						.secondPictureContainer {
+							// border-radius: 20px;
+							position: relative;
+							.secondPicture {
+								width: 9.097vw;
+								height: 12.708vw;
+								// border-radius: 15px 60px 15px 15px;
+								object-fit: contain;
+							}
+						}
+					}
+					.bottom {
+						display: flex;
+						justify-content: center;
+						gap: 0.5rem;
+						height: 50%;
+						width: 100%;
+						margin-left: 1.5rem;
+						.thirdPictureContainer {
+							position: relative;
+							.thirdPicture {
+								width: 9.583vw;
+								height: 12.431vw;
+								// border-radius: 20px 20px 20px 80px;
+								object-fit: contain;
+							}
+						}
+						.fourthPictureContainer {
+							// border-radius: 20px;
+							position: relative;
+							.fourthPicture {
+								width: 15.972vw;
+								height: 21.181vw;
+								// border-radius: 20px 50px 20px 20px;
+								object-fit: contain;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@include tabletS {
+	.hero {
+		// border: 1px solid blue;
+		height: 92vh;
+		width: 100vw;
+		.container {
+			.subContainer {
+				flex-direction: column-reverse;
+				align-items: center;
+			}
+			// display: flex;
+			.left {
+				// position: absolute;
+				// height: 50vh;
+				// bottom: 0;
+				width: 90%;
+				margin: 0;
+				.uptitle {
+					font-size: 7vw;
+					font-style: normal;
+					font-weight: 400;
+					// line-height: 30px;
+				}
+				.titleContainer {
+					.title {
+						font-size: 8.5vw;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 120%; /* 40.8px */
+						letter-spacing: -1.7px;
+					}
+				}
+				.outlierContainer {
+					gap: 0.5rem;
+					.outlier {
+						font-size: 8.5vw;
+						font-style: normal;
+						font-weight: 700;
+						line-height: 120%; /* 40.8px */
+						letter-spacing: -1.7px;
+						margin: 0;
+						border-radius: 5px 5px 19px 5px;
+						padding: 0rem 0.5rem;
+					}
+				}
+				.contactUsLinkContainer {
+					margin-top: 2vh;
+					.contactUsLinkImage{
+						object-fit: contain;
+						width: 6vw;
+						height: 6vw;
+					}
+					.contactUsLink {
+						font-size: 4vw;
+					}
+				}
+				.partnerContainer {
+					position: initial;
+					// position: absolute;
+					// bottom: 0;
+					margin-top: 10vh;
+					.container {
+						width: 100%;
+						align-items: start;
+						.title {
+							font-size: 4vw;
+							font-style: normal;
+							font-weight: 400;
+							line-height: 110%; /* 17.6px */
+							text-transform: uppercase;
+						}
+						.partenaires {
+							margin-top: 1vh;
+							width: 100%;
+							// justify-content: center;
+							flex-wrap: wrap;
+							gap: 1rem;
+							.logo_gustave {
+								width: 30px;
+								height: 28px;
+							}
+							.logo_leon {
+								width: 30px;
+								height: 28px;
+							}
+							.logo_charite {
+								width: 41px;
+								height: 28px;
+							}
+							.logo_IEO {
+								width: 71px;
+								height: 28px;
+							}
+							.logo_VHIO {
+								width: 51px;
+								height: 28px;
+							}
+						}
+					}
+				}
+			}
+			.right {
+				// height: 50vh;
+				// width: 90vw;
+				// position: static;
+				// top: 5vh;
+				margin-left: 2vw;
+				margin-top: 2vh;
+				height: auto;
+				.container {
+					width: 100%;
+					height: 100%;
+					.imagesContainer {
+						padding: 1rem 0;
+						gap: 0.5rem;
+						.top {
+							.firstPictureContainer {
+								height: auto;
+								width: auto;
+								display: flex;
+								align-items: end;
+								.firstPicture {
+									object-fit: fill;
+									width: 30.75vw;
+									height: 45.67718446vw;
+								}
+							}
+							.secondPictureContainer {
+								height: auto;
+								width: auto;
+								display: flex;
+								align-items: end;
+								.secondPicture {
+									object-fit: fill;
+									width: 20.5vw;
+									height: 28.7615vw;
+								}
+							}
+						}
+						.bottom {
+							margin: 0;
+							.thirdPictureContainer {
+								height: auto;
+								width: auto;
+								display: flex;
+								align-items: start;
+								.thirdPicture {
+									object-fit: fill;
+									width: 20.5vw;
+									height: 28.7615vw;
+								}
+							}
+							.fourthPictureContainer {
+								height: auto;
+								width: auto;
+								display: flex;
+								align-items: start;
+								.fourthPicture {
+									object-fit: fill;
+									width: 30.75vw;
+									height: 43.67718446vw;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@include mobileM {
+	.hero {
+		height: 100vh;
+	}
+}

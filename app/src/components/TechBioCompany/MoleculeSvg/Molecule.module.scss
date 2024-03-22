@@ -1,0 +1,26 @@
+@import '@/styles/breakpoints.module';
+
+.moleculeSvg {
+	transform: translate(8vh, -5vh);
+}
+.baseSvg {
+	position: absolute;
+	transform: translateY(-5vh);
+}
+@include desktopX {
+	.moleculeSvg {
+		transform: translate(10vh, -5vh);
+	}
+}
+@include tabletS {
+	.moleculeSvg {
+		transform: none;
+	}
+	.baseSvg {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -30%);
+		z-index: -1;
+		position: absolute;
+	}
+}

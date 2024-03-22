@@ -1,0 +1,114 @@
+@import '@/styles/breakpoints.module';
+
+.footer {
+	font-family: var(--font-manrope);
+	font-weight: 400;
+	border-radius: 20px 20px 0 0;
+	padding: 8vh 2vh 8vh 2vh;
+	//padding: 40px 20px 0 20px;
+	height: 6vh;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+
+		.weAre {
+			color: #f05801;
+			font-size: 40px;
+			line-height: 40px;
+		}
+
+		.weWant {
+			font-size: 25px;
+			line-height: 27.32px;
+		}
+
+		.links {
+			font-size: 1.111vw;
+			.row1 {
+				text-align: left;
+				margin-bottom: 1.117vh;
+
+				a {
+					cursor: pointer;
+					margin-right: 26px;
+					text-decoration: none;
+					color: black;
+					font-size: 1.111vw;
+					line-height: 30px;
+				}
+				:hover {
+					color: #f05801;
+				}
+			}
+
+			.row2 {
+				text-align: right;
+
+				a {
+					margin-right: 30px;
+					text-decoration: none;
+					color: #6f6f6f;
+					opacity: 0.5;
+					font-size: 16px;
+					line-height: 21.86px;
+				}
+			}
+
+			.row3 {
+				margin-top: 10px;
+				text-align: right;
+				margin-right: 30px;
+			}
+		}
+	}
+}
+@include mobileM {
+	.footer {
+		padding-top: 20vh;
+	}
+}
+
+@include mobileL {
+	.footer {
+		.container {
+			padding-bottom: 10vh;
+			position: relative;
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+			gap: 5vh;
+			.title {
+				width: 80vw;
+			}
+			.links {
+				display: flex;
+				flex-direction: column;
+				gap: 2vh;
+				font-size: 4vw;
+				.row1 {
+					display: flex;
+					text-align: center;
+					align-items: center;
+					flex-direction: column;
+					gap: 3vh;
+					a {
+						margin-right: 0;
+						font-size: 6vw;
+					}
+				}
+
+				.row2 {
+					display: flex;
+					text-align: center;
+					align-items: center;
+					flex-direction: column;
+					gap: 3vh;
+					a {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+}

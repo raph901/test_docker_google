@@ -1,0 +1,49 @@
+.allCardContainer {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	.carousel {
+		cursor: grab;
+		overflow: hidden;
+		.innerCarousel {
+			display: flex;
+			.itemContainer {
+				position: relative;
+				height: 100vh;
+				width: 100vw;
+				.imgPeople img {
+					pointer-events: none;
+					width: 253px;
+					padding-bottom: 10px;
+				}
+				.textCarousel {
+					padding-left: 15px;
+					font-size: 16px;
+					display: flex;
+					width: 253px;
+					flex-direction: column;
+					gap: 10px;
+					.perso {
+						font-size: 20px;
+					}
+					.titletest {
+						color: #f05801;
+					}
+					.search {
+						width: 211px;
+						line-height: 18px;
+					}
+				}
+				.institut {
+					position: absolute;
+					bottom: 0;
+					padding: 10px 0 0 10px;
+					img {
+						// max-height: 70px;
+						// max-width: 70px;
+					}
+				}
+			}
+		}
+	}
+}

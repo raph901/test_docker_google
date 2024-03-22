@@ -1,0 +1,191 @@
+@import '@/styles/breakpoints.module';
+
+.section {
+	width: 100%;
+	background: rgb(255, 255, 255);
+	background: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 1) 90%,
+		rgba(254, 250, 246, 1) 100%
+	);
+
+	.titleContainer {
+		.title {
+			position: relative;
+			display: inline-block;
+			padding: 1rem 1.5rem;
+			font-family: var(--font-inconsolata);
+			font-size: 16px;
+			background: linear-gradient(45deg, #f05801 50%, #4f0fff 78.48%);
+			background-clip: text;
+			color: transparent;
+			border-radius: 40px;
+			z-index: 0;
+			&::before {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				inset: 0;
+				border: 1px solid transparent;
+				border-radius: 40px;
+				background: inherit;
+				background-origin: border-box;
+				background-clip: border-box;
+				-webkit-mask: linear-gradient(#fff 0 0) padding-box,
+					linear-gradient(#fff 0 0);
+				-webkit-mask-composite: xor;
+				mask-composite: exclude;
+				-webkit-mask-repeat: no-repeat;
+			}
+		}
+	}
+	.subtitleContainer {
+		margin-top: 20px;
+		.subtitle {
+			color: #000;
+			/* h3 */
+			font-family: var(--font-manrope);
+			font-size: 40px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 30px; /* 115.385% */
+			// width: 40%;
+			span {
+				font-family: var(--font-manrope);
+				font-style: normal;
+				font-weight: 400;
+				line-height: 100%;
+				background: linear-gradient(45deg, #f05801 50%, #4f0fff 78.48%);
+				background-clip: text;
+				color: transparent;
+			}
+		}
+	}
+}
+
+.TechBioCompany {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fefaf6;
+	height: 260vh;
+	.scrollContainer {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		height: 300vh;
+	}
+	.container {
+		position: sticky;
+		// border: 1px solid red;
+		width: 90%;
+		display: flex;
+		gap: 1rem;
+		align-items: flex-start;
+		.left {
+			// border: 1px solid blue;
+			width: 33%;
+			position: sticky;
+			top: 0;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			.textContainer {
+				margin-top: 2rem;
+				// background-color: #fff;
+				// padding: 1rem;
+				display: flex;
+				flex-direction: column;
+				gap: 2rem;
+				.text {
+					color: #000;
+					font-family: var(--font-manrope);
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 2rem; /* 100% */
+					padding: 1rem;
+				}
+			}
+		}
+		.middle {
+			position: sticky;
+			top: 0;
+			height: 100vh;
+			width: 33.33%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			.lineContainer {
+				margin-top: 2rem;
+				// background-color: #fff;
+				// padding: 1rem;
+				display: flex;
+
+				flex-direction: column;
+				gap: 10rem;
+				.line {
+					border: none;
+					border: 2px;
+					background: linear-gradient(
+						99.82deg,
+						#ffb68d 18.82%,
+						#9773f9 84.13%
+					);
+					overflow: visible;
+					text-align: center;
+					height: 2px;
+					width: 200px;
+				}
+			}
+		}
+		.right {
+			position: sticky;
+			top: 0;
+			height: 100vh;
+			width: 33.33%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			.row1container {
+				display: flex;
+				padding: 0 2rem;
+				gap: 1rem;
+			}
+		}
+	}
+}
+
+/* ----------------New  */
+.mainWrapper {
+	// border: 2px solid red;
+	height: 300vh;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.sticky {
+	height: 100vh;
+	position: sticky;
+	top: 0;
+}
+@include desktopX {
+	.mainWrapper {
+		padding: 0 0 10vh 0;
+	}
+}
+@include tabletS {
+	.mainWrapper {
+		height: auto;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.sticky {
+		height: auto;
+		position: sticky;
+		top: 0;
+	}
+}

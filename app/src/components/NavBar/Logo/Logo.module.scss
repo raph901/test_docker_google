@@ -1,0 +1,32 @@
+@import '@/styles/breakpoints.module';
+
+.logo {
+	z-index: 2;
+	a {
+		cursor: pointer;
+	}
+}
+
+.animeSvgCure51Container {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: -1;
+}
+
+.animeSvgCure51 {
+	width: 11.389vw;
+	height: 3.889vw;
+}
+
+@include tabletS {
+	.animeSvgCure51 {
+		width: 41vw;
+		height: 14vw;
+	}
+}

@@ -1,0 +1,26 @@
+@import '@/styles/breakpoints.module';
+
+.pillSvg {
+	transform: translate(4vh, -3vh);
+}
+.baseSvg {
+	position: absolute;
+	transform: translateY(-5vh);
+}
+@include desktopX {
+	.pillSvg {
+		transform: translate(5vh, -3vh);
+	}
+}
+@include tabletS {
+	.pillSvg {
+		transform: none;
+	}
+	.baseSvg {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -30%);
+		z-index: -1;
+		position: absolute;
+	}
+}
